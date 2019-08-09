@@ -23,7 +23,7 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onJieLong(EventJieLong event) {
-        FMLCommonHandler.instance().getMinecraftServerInstance().sendMessage(new TextComponentString(
+        FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().sendMessage(new TextComponentString(
                 "玩家 " + event.getEntityPlayer().getGameProfile().getName()
                         + " 成功接龙！" + "当前成语：" + JieLongHandler.instance().getCurrentIdiom()
                         + " ，当前接龙数：" + JieLongHandler.instance().getCurrentCount() + "。")
@@ -33,7 +33,7 @@ public class EventHandler {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onJieLongStart(EventStartJieLong event) {
         if (event.isCanceled()) return;
-        FMLCommonHandler.instance().getMinecraftServerInstance().sendMessage(new TextComponentString(
+        FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().sendMessage(new TextComponentString(
                 "玩家 " + event.getEntityPlayer().getGameProfile().getName() + " 成功发起接龙！起始成语是：" +
                         event.getIdiom() + "。"
         ));

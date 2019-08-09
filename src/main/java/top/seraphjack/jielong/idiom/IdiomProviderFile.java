@@ -45,7 +45,8 @@ public class IdiomProviderFile implements IdiomProvider {
     private String removeRedundantCharacters(String in) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < in.length(); i++) {
-            if (in.charAt(i) != 768) {
+            //                    | Magic value
+            if (in.charAt(i) <= 500) {
                 sb.append(in.charAt(i));
             }
         }
