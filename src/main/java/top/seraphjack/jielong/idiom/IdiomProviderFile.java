@@ -55,7 +55,6 @@ public class IdiomProviderFile implements IdiomProvider {
 
     @Nullable
     private String getLastPinyin(String pinyin) {
-        String ret;
         for (int i = pinyin.length() - 1; i > 0; i--) {
             if (pinyin.charAt(i) == ' ') {
                 return removeRedundantCharacters(Normalizer.normalize(pinyin.substring(i + 1), Normalizer.Form.NFKD));
