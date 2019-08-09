@@ -1,0 +1,14 @@
+[
+  {
+    "modid": "jielong",
+    "name": "JieLong",
+    "description": "JieLong",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "url" : "",
+    "updateUrl": "",
+    "authorList": ["Seraph_JACK"],
+    "credits": "chinese-xinhua",
+    "screenshots": []
+  }
+]
