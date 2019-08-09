@@ -22,4 +22,9 @@ public class CommandJieLong extends CommandTreeBase {
     public String getUsage(ICommandSender sender) {
         return "/jielong start <起始成语>";
     }
+
+    @Override
+    public int getRequiredPermissionLevel() {
+        return 0;
+    }
 }
